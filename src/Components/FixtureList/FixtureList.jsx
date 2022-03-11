@@ -1,15 +1,16 @@
 
 import { ScrollView, StyleSheet } from "react-native";
+import { TouchableOpacity } from "react-native";
 import FixturePanel from "../FixturePanel/FixturePanel";
 import SubHeader from "../SubHeader/SubHeader"
 
 
-const FixtureList = () => {
+const FixtureList = ({navigation}) => {
     return (
         <ScrollView contentContainerStyle={styles.container} >
             <SubHeader >
             </SubHeader>
-            <FixturePanel></FixturePanel>
+            <FixturePanel navigation={navigation}></FixturePanel>
             <SubHeader>
             </SubHeader>
             <FixturePanel></FixturePanel>

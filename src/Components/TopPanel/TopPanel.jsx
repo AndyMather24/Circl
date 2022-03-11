@@ -3,13 +3,13 @@ import PromoCard from '../PromoCard/PromoCard';
 import { styles } from './TopPanel.Style'
 import FixtureCard from '../FixtureCard/FixtureCard';
 
-const TopPanel = () => {
+const TopPanel = ({navigation}) => {
     return (
         <View style={styles.top}>
             <Text style={[styles.header]}>Fixtures</Text>
             <ScrollView horizontal style={styles.flexRow}>
                 <PromoCard></PromoCard>
-                <FixtureCard></FixtureCard>
+                <FixtureCard  navigation={navigation}></FixtureCard>
                 <FixtureCard></FixtureCard>
                 <FixtureCard></FixtureCard>
                 <FixtureCard></FixtureCard>

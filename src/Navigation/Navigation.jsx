@@ -1,18 +1,34 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { FontAwesome } from '@expo/vector-icons';
 import LoginScreen from "../Screens/LoginScreen";
 import SearchScreen from "../Screens/SearchScreen";
 
+
+
+const Stack = createNativeStackNavigator();
+
 const BottomTab = createBottomTabNavigator();
+
 
 export default function Navigation() {
     return (
-        <NavigationContainer>
-            <BottomTabNavigation>
-            </BottomTabNavigation>
+        <NavigationContainer >  
+            <RootNavigator/>
         </NavigationContainer>
     )
+}
+
+
+
+function RootNavigator() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name="Root" component={BottomTabNavigation} options={{ headerShown: false }} />
+      <Stack.Screen name="login" component={LoginScreen}  />
+    </Stack.Navigator>
+  );
 }
 
 
