@@ -1,14 +1,14 @@
 import { Text, View } from "react-native";
 import { styles } from "./SubHeader.Style";
 
-const SubHeader = () => {
+const SubHeader = ({league, date}) => {
     return (
         <View style={styles.container}>
             <Text style={styles.subHeader}>
-             Premier League 
+            {league}
             </Text>
-            <Text style={styles.dateHeader} >
-            Thu 10, 19:45
+            <Text style={styles.dateHeader}>
+            {date}
             </Text>
         </View >
     );

@@ -1,28 +1,20 @@
 
-import { ScrollView, StyleSheet } from "react-native";
-import { TouchableOpacity } from "react-native";
+import { View, StyleSheet } from "react-native";
 import FixturePanel from "../FixturePanel/FixturePanel";
-import SubHeader from "../SubHeader/SubHeader"
 
-
-const FixtureList = ({navigation}) => {
+const FixtureList = ({navigation, matches}) => {
     return (
-        <ScrollView contentContainerStyle={styles.container} >
-            <SubHeader >
-            </SubHeader>
-            <FixturePanel navigation={navigation}></FixturePanel>
-            <SubHeader>
-            </SubHeader>
-            <FixturePanel></FixturePanel>
-            <FixturePanel></FixturePanel>
-            <SubHeader>
-            </SubHeader>
-            <FixturePanel></FixturePanel>
-            <FixturePanel></FixturePanel>
-        </ScrollView>
-
-    ) 
-}    
+        <View style={styles.container}>
+            {
+                matches.map((match, i) => {
+                    return (
+                        <FixturePanel key={i} navigation={navigation} match={match}/>
+                    )
+                })
+            }
+        </View>
+    )
+}   
 
 const styles = StyleSheet.create({
 
