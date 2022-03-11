@@ -1,18 +1,21 @@
-import { StyleSheet } from 'react-native'
-import { backgroundColor, borderColor } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes';
+import { StyleSheet } from 'react-native';
+import { color } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes';
+import { Colors, Typography } from '../../Styles/index';
+
 
 const styles = StyleSheet.create({
     container: {
-        width: 200,
+        width: 210,
         height: 120,
         marginRight: 10,
         borderRadius: 8
     },
     topSection: {
+        color: Colors.colors.primaryFont,
+        backgroundColor: Colors.colors.primaryFont,
         flex: 3,
         flexDirection: 'row',
         alignContent: 'space-between',
-        backgroundColor: 'white',
         borderTopLeftRadius: 8,
         borderTopRightRadius: 8,
         justifyContent: "center",
@@ -21,14 +24,15 @@ const styles = StyleSheet.create({
     },
 
     topSectionText: {
-        fontSize: 16
+        ...Typography.FontSize.md,
+        ...Typography.Transform.upperCase,
+        ...Typography.FontWeight.bold      
     },
-
     versusBox: {
+        backgroundColor: Colors.colors.secondaryComponentBackground,
+        color: Colors.colors.primaryFont,
         width: 20,
         height: 20,
-        color: 'white',
-        backgroundColor: "black",
         textAlign: 'center',
         margin: 5
     },
@@ -43,14 +47,12 @@ const styles = StyleSheet.create({
 
     lowerText: {
         fontSize: 10,
-        color: '#B3B2BD',
-        marginTop: 8
+        color: Colors.colors.secondaryFont,
+        marginTop: 8,
+        ...Typography.FontSize.sm,
+        ...Typography.FontWeight.bold
     },
 
-    boldUpperCase: {
-        fontWeight: 'bold',
-        textTransform: 'uppercase'
-    },
 
     alignLeft: {
         flex: 1,
