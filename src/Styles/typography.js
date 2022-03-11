@@ -16,7 +16,8 @@ export const Header = {
         fontSize: 16,
         fontWeight: "bold",
         color: Colors.colors.primaryFont
-    }
+    },
+
 
 };
 
@@ -29,7 +30,12 @@ export const Transform = {
 export const FontSize = {
     sm: {
         fontSize: 13
+    },
+    md: {
+        fontSize: 16
     }
+
+
 };
 
 export const FontWeight = {
