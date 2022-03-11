@@ -4,9 +4,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { FontAwesome } from '@expo/vector-icons';
 import LoginScreen from "../Screens/LoginScreen";
-import SearchScreen from "../Screens/SearchScreen";
+import ExploreScreen from "../Screens/ExploreScreen";
 import { Colors } from "../Styles/index";
-import { colors } from "../Styles/colors";
 
 
 const Stack = createNativeStackNavigator();
@@ -36,14 +35,14 @@ function RootNavigator() {
 function BottomTabNavigation() {
     return (
         <BottomTab.Navigator
-            initialRouteName="Search"
+            initialRouteName="Explore"
             screenOptions={{
                 headerShown: false,
                 tabBarStyle : styles.nav
             }}>
             <BottomTab.Screen
-                name="search"
-                component={SearchScreen}
+                name="Explore"
+                component={ExploreScreen}
                 options={() => ({
                     tabBarShowLabel: false,
                     tabBarIcon: () => <TabBarIcon name="search" />
