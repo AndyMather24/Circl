@@ -64,7 +64,8 @@ const styles = StyleSheet.create({
     alignRight: {
         flex: 1,
         marginLeft: 10,
-        textAlign: 'left'
+        textAlign: 'left',
+        paddingRight: 10
     },
 
 })
