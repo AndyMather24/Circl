@@ -98,7 +98,7 @@ const SearchScreen = ({navigation}) => {
     return (
         <View style={styles.container}>
             <TopPanel navigation={navigation} matches={UpcomingFixtures}></TopPanel>
-            <ScrollView contentContainerStyle={styles.container}>
+            <ScrollView >
             {              
                     FixturesOverview.map((fixture, i) => {
                         return ([
