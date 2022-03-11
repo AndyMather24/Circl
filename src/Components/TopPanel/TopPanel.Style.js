@@ -16,7 +16,9 @@ const styles = StyleSheet.create({
     },
 
     flexRow: {
-        flexDirection: 'column'
+        flexDirection: 'column',
+        flex: 1
+
     }
 })
 
