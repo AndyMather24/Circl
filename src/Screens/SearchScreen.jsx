@@ -31,7 +31,7 @@ const FixturesOverview = [
         league: "Championship",
         matches:[
             {
-                home: "MiddlesBorough",
+                home: "Middlesborough",
                 homeColour: "red",
                 away: "Birmingham",
                 awayColour: "blue",
@@ -69,7 +69,7 @@ const FixturesOverview = [
 
 const UpcomingFixtures = [
         {
-            home: "MiddlesBorough",
+            home: "Middlesborough",
             homeColour: "red",
             away: "Birmingham",
             awayColour: "blue",
