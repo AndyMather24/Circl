@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
 
     fixtureDetail: {
         ...Typography.Header.title,
+        ...Typography.Transform.upperCase,
         margin: 8,
     },
 
@@ -82,16 +83,15 @@ const styles = StyleSheet.create({
 
 
     detailWrapper: {
-        borderBottomColor: 'red',
         borderBottomWidth: 3,
         borderStyle: 'solid',
-        padding:  2 
+        padding:  2
     },
 
     bottomSection: {
-        flex: 1,
-        color: 'white'
+        flex: 1
     },
+
 
 })
 
