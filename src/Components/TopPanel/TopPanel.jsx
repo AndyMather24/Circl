@@ -7,11 +7,10 @@ const TopPanel = ({navigation, matches}) => {
         return (
         
             <View style={styles.top}>
-                <Text style={[styles.header]}>Fixtures</Text>
-                <ScrollView horizontal style={styles.flexRow}>
-                    <PromoCard></PromoCard>
-                  {              
-                    matches.map((match, i) => {
+                    <Text style={[styles.header]}>Fixtures</Text>
+                <ScrollView horizontal>
+                    <PromoCard/>
+                  { matches.map((match, i) => {
                         return (
                              <FixtureCard key={i}  navigation={navigation} match={match}></FixtureCard>
                     )
@@ -22,8 +21,7 @@ const TopPanel = ({navigation, matches}) => {
         )
     }
 
-
-
+  
 
 export default TopPanel;
 
